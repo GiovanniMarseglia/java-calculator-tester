@@ -5,8 +5,8 @@ import org.junit.jupiter.api.Test;
 import java.util.Random;
 
 public class CalculatorTest {
-    float num1 = new Random().nextFloat();
-    float num2 = new Random().nextFloat();
+    float num1 = new Random(3).nextFloat();
+    float num2 = new Random(6).nextFloat();
     Calculator calculator = new Calculator();
     @Test
     void add() {
