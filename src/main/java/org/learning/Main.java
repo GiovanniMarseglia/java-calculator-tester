@@ -21,6 +21,20 @@ public class Main {
         System.out.println(calculator.divide(num1,num2));
         System.out.print("Moltiplicazione: ");
         System.out.println(calculator.multiply(num1,num2));
+
+
+        System.out.println("Calcolo biglietto treno");
+        System.out.println("Inserisci la tua età");
+        int eta=Integer.parseInt(scanner.nextLine());
+        System.out.println("Inserisci i km che vuoi percorrere");
+        double km=Double.parseDouble(scanner.nextLine());
+        Ticket ticket = new Ticket(km,eta);
+        System.out.println("Il prezzo è di: " + ticket.totalPrice);
+        if (ticket.sale()==0){
+            System.out.println("Non rientri in nessuna condizione per ricevere uno sconto");
+        }else{
+            System.out.println("Per te è riservato uno sconto, il nuovo prezzo è di: " + ticket.sale());
+        }
         scanner.close();
     }
 }
